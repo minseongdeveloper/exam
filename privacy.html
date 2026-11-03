@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 — 브랜드명</title>
+  <meta name="description" content="브랜드명 개인정보처리방침" />
+
+  <!-- 폰트: Pretendard -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'media',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Pretendard Variable"', 'Pretendard', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fff4f1',
+              100: '#ffe6df',
+              400: '#ff7a5c',
+              500: '#ff5a36',
+              600: '#ec4420',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950; }
+      .btn-primary { @apply bg-brand-500 text-white shadow-sm shadow-brand-500/30 hover:bg-brand-600; }
+      .eyebrow { @apply text-xs font-bold uppercase tracking-[0.2em] text-brand-500; }
+
+      /* 방침 본문 */
+      .terms section { @apply scroll-mt-24 border-t border-zinc-200 py-10 first:border-t-0 first:pt-0 dark:border-zinc-800; }
+      .terms h2 { @apply text-xl font-bold tracking-tight; }
+      .terms h2 span { @apply mr-2 text-brand-500; }
+      .terms p { @apply mt-4 leading-relaxed text-zinc-600 dark:text-zinc-400; }
+      .terms ol { @apply mt-4 list-decimal space-y-2 pl-5 leading-relaxed text-zinc-600 marker:text-zinc-400 dark:text-zinc-400; }
+      .terms ol ol { @apply mt-2 list-[lower-alpha]; }
+
+      /* 표 */
+      .terms .table-wrap { @apply mt-5 overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800; }
+      .terms table { @apply w-full min-w-[520px] text-left text-sm; }
+      .terms th { @apply bg-zinc-50 px-4 py-3 font-semibold text-zinc-900 dark:bg-zinc-800/60 dark:text-zinc-100; }
+      .terms td { @apply border-t border-zinc-200 px-4 py-3 align-top text-zinc-600 dark:border-zinc-800 dark:text-zinc-400; }
+
+      .toc-link { @apply block rounded-lg px-3 py-1.5 text-sm text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-900 dark:hover:text-white; }
+      .toc-link.active { @apply bg-brand-50 font-semibold text-brand-600 dark:bg-brand-500/10 dark:text-brand-400; }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 font-sans text-zinc-900 antialiased [word-break:keep-all] dark:bg-zinc-950 dark:text-zinc-100">
+
+  <!-- 헤더 -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-stone-50/80 backdrop-blur-md dark:border-zinc-800/70 dark:bg-zinc-950/80">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="h-6 w-6 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600"></span>
+        브랜드명
+      </a>
+
+      <button id="menu-btn" class="grid h-10 w-10 place-items-center rounded-lg hover:bg-zinc-100 md:hidden dark:hover:bg-zinc-900" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-links">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <ul id="nav-links" class="absolute inset-x-0 top-16 hidden flex-col gap-1 border-b border-zinc-200 bg-stone-50 px-6 py-4 text-sm font-medium md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 dark:border-zinc-800 dark:bg-zinc-950 md:dark:bg-transparent">
+        <li><a href="index.html#features" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">기능</a></li>
+        <li><a href="index.html#how" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">사용 방법</a></li>
+        <li><a href="index.html#pricing" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">요금제</a></li>
+        <li><a href="index.html#faq" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">FAQ</a></li>
+        <li class="pt-2 md:pt-0"><a href="index.html#cta" class="btn btn-primary w-full !py-2.5 md:w-auto">시작하기</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <!-- 제목 -->
+    <div class="max-w-3xl">
+      <span class="eyebrow">Privacy Policy</span>
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">개인정보처리방침</h1>
+      <p class="mt-5 text-zinc-600 dark:text-zinc-400">브랜드명(이하 "회사")은 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보를 소중하게 보호합니다. 이 방침은 회사가 어떤 개인정보를 왜 수집하고, 어떻게 이용·보관·파기하는지 안내합니다.</p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-500">
+        <span>시행일 <strong class="font-semibold text-zinc-900 dark:text-zinc-100">0000년 00월 00일</strong></span>
+        <span>최종 수정일 <strong class="font-semibold text-zinc-900 dark:text-zinc-100">0000년 00월 00일</strong></span>
+      </div>
+    </div>
+
+    <!-- 한눈에 보기 -->
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <p class="text-xs font-semibold text-zinc-400">수집 항목</p>
+        <p class="mt-2 font-bold">이름, 이메일 등 최소한의 정보</p>
+      </div>
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <p class="text-xs font-semibold text-zinc-400">보유 기간</p>
+        <p class="mt-2 font-bold">목적 달성 또는 탈퇴 시 즉시 파기</p>
+      </div>
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <p class="text-xs font-semibold text-zinc-400">제3자 제공</p>
+        <p class="mt-2 font-bold">동의 없이 제공하지 않음</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid gap-12 lg:grid-cols-4">
+      <!-- 목차 -->
+      <aside class="lg:col-span-1">
+        <nav class="lg:sticky lg:top-24" aria-label="방침 목차">
+          <p class="mb-3 px-3 text-xs font-bold uppercase tracking-wider text-zinc-400">목차</p>
+          <ul id="toc" class="space-y-0.5">
+            <li><a href="#p1" class="toc-link">1. 수집 항목 및 방법</a></li>
+            <li><a href="#p2" class="toc-link">2. 이용 목적</a></li>
+            <li><a href="#p3" class="toc-link">3. 보유 및 이용 기간</a></li>
+            <li><a href="#p4" class="toc-link">4. 제3자 제공</a></li>
+            <li><a href="#p5" class="toc-link">5. 처리 위탁</a></li>
+            <li><a href="#p6" class="toc-link">6. 파기 절차 및 방법</a></li>
+            <li><a href="#p7" class="toc-link">7. 이용자의 권리</a></li>
+            <li><a href="#p8" class="toc-link">8. 안전성 확보 조치</a></li>
+            <li><a href="#p9" class="toc-link">9. 쿠키 사용</a></li>
+            <li><a href="#p10" class="toc-link">10. 개인정보 보호책임자</a></li>
+            <li><a href="#p11" class="toc-link">11. 권익침해 구제방법</a></li>
+            <li><a href="#p12" class="toc-link">12. 방침의 변경</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- 본문 -->
+      <article class="terms rounded-2xl border border-zinc-200 bg-white p-6 sm:p-10 lg:col-span-3 dark:border-zinc-800 dark:bg-zinc-900">
+        <section id="p1">
+          <h2><span>1.</span>수집하는 개인정보 항목 및 수집 방법</h2>
+          <p>회사는 서비스 제공에 필요한 최소한의 개인정보만 수집합니다.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>구분</th><th>수집 항목</th><th>수집 방법</th></tr></thead>
+              <tbody>
+                <tr><td>회원가입</td><td>(필수) 이메일, 비밀번호, 이름</td><td>회원가입 화면</td></tr>
+                <tr><td>소식 받기 신청</td><td>(필수) 이메일</td><td>메인 페이지 신청 폼</td></tr>
+                <tr><td>문의하기</td><td>(필수) 이름, 이메일, 문의 유형, 문의 내용<br />(선택) 회사 / 팀명</td><td>문의하기 페이지</td></tr>
+                <tr><td>유료 결제</td><td>결제 수단 정보, 결제 기록</td><td>결제대행사를 통한 수집</td></tr>
+                <tr><td>자동 수집</td><td>접속 IP, 쿠키, 접속 일시, 브라우저 정보</td><td>서비스 이용 과정에서 자동 생성</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="p2">
+          <h2><span>2.</span>개인정보의 이용 목적</h2>
+          <ol>
+            <li>회원 식별, 가입 의사 확인 및 회원 관리</li>
+            <li>서비스 제공, 유료 서비스 결제 및 정산</li>
+            <li>문의 접수 및 답변, 공지사항 전달</li>
+            <li>신규 기능 및 소식 안내 (수신에 동의한 경우에 한함)</li>
+            <li>부정 이용 방지 및 서비스 개선을 위한 통계 분석</li>
+          </ol>
+        </section>
+
+        <section id="p3">
+          <h2><span>3.</span>개인정보의 보유 및 이용 기간</h2>
+          <p>회사는 개인정보 수집·이용 목적이 달성되거나 회원이 탈퇴하면 지체 없이 파기합니다. 다만 관련 법령에 따라 보존해야 하는 정보는 아래 기간 동안 보관합니다.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>보존 항목</th><th>근거 법령</th><th>보존 기간</th></tr></thead>
+              <tbody>
+                <tr><td>계약 또는 청약철회 등에 관한 기록</td><td>전자상거래법</td><td>5년</td></tr>
+                <tr><td>대금결제 및 재화 등의 공급에 관한 기록</td><td>전자상거래법</td><td>5년</td></tr>
+                <tr><td>소비자의 불만 또는 분쟁처리에 관한 기록</td><td>전자상거래법</td><td>3년</td></tr>
+                <tr><td>웹사이트 방문 기록</td><td>통신비밀보호법</td><td>3개월</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="p4">
+          <h2><span>4.</span>개인정보의 제3자 제공</h2>
+          <p>회사는 이용자의 개인정보를 이용 목적 범위 안에서만 처리하며, 이용자의 사전 동의 없이 제3자에게 제공하지 않습니다. 다만 법령에 특별한 규정이 있거나 수사기관이 법령에 따른 절차에 따라 요청하는 경우는 예외로 합니다.</p>
+        </section>
+
+        <section id="p5">
+          <h2><span>5.</span>개인정보 처리 위탁</h2>
+          <p>회사는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>수탁업체</th><th>위탁 업무</th></tr></thead>
+              <tbody>
+                <tr><td>OO페이먼츠</td><td>결제 처리 및 결제 정보 보관</td></tr>
+                <tr><td>OO클라우드</td><td>데이터 보관 및 서버 운영</td></tr>
+                <tr><td>OO메일</td><td>이메일 발송</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="p6">
+          <h2><span>6.</span>개인정보의 파기 절차 및 방법</h2>
+          <ol>
+            <li>보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다.</li>
+            <li>전자적 파일은 복구할 수 없는 기술적 방법으로 삭제하고, 종이 문서는 분쇄하거나 소각합니다.</li>
+          </ol>
+        </section>
+
+        <section id="p7">
+          <h2><span>7.</span>이용자의 권리와 행사 방법</h2>
+          <ol>
+            <li>이용자는 언제든지 자신의 개인정보 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다.</li>
+            <li>권리 행사는 서비스 내 설정 메뉴, 이메일 또는 <a href="contact.html" class="font-semibold text-brand-500 hover:underline">문의하기</a>를 통해 할 수 있으며, 회사는 지체 없이 조치합니다.</li>
+            <li>만 14세 미만 아동의 개인정보는 수집하지 않습니다.</li>
+          </ol>
+        </section>
+
+        <section id="p8">
+          <h2><span>8.</span>개인정보의 안전성 확보 조치</h2>
+          <ol>
+            <li>비밀번호 등 중요 정보의 암호화 저장 및 전송 구간 암호화(HTTPS)</li>
+            <li>개인정보 접근 권한의 최소화 및 접근 기록 보관</li>
+            <li>보안 프로그램 설치 및 정기적인 점검</li>
+            <li>개인정보 취급 직원에 대한 정기 교육</li>
+          </ol>
+        </section>
+
+        <section id="p9">
+          <h2><span>9.</span>쿠키의 설치·운영 및 거부</h2>
+          <ol>
+            <li>회사는 이용자에게 맞춤형 서비스를 제공하기 위해 쿠키(cookie)를 사용합니다.</li>
+            <li>이용자는 웹 브라우저 설정에서 쿠키 저장을 거부할 수 있습니다. 다만 쿠키를 거부하면 로그인 등 일부 서비스 이용에 어려움이 있을 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <section id="p10">
+          <h2><span>10.</span>개인정보 보호책임자</h2>
+          <p>개인정보 처리와 관련한 문의, 불만 처리, 피해 구제 등은 아래 담당자에게 연락해 주세요.</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th class="w-32">책임자</th><td>홍길동 (개인정보보호팀장)</td></tr>
+                <tr><th>이메일</th><td><a href="mailto:privacy@example.com" class="text-brand-500 hover:underline">privacy@example.com</a></td></tr>
+                <tr><th>전화</th><td>02-000-0000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="p11">
+          <h2><span>11.</span>권익침해 구제방법</h2>
+          <p>개인정보 침해에 대한 신고나 상담이 필요하면 아래 기관에 문의할 수 있습니다.</p>
+          <ol>
+            <li>개인정보침해신고센터 (privacy.kisa.or.kr / 국번 없이 118)</li>
+            <li>개인정보분쟁조정위원회 (www.kopico.go.kr / 1833-6972)</li>
+            <li>대검찰청 사이버수사과 (www.spo.go.kr / 국번 없이 1301)</li>
+            <li>경찰청 사이버수사국 (ecrm.police.go.kr / 국번 없이 182)</li>
+          </ol>
+        </section>
+
+        <section id="p12">
+          <h2><span>12.</span>개인정보처리방침의 변경</h2>
+          <p>이 방침은 법령이나 서비스 변경에 따라 수정될 수 있으며, 변경 시 시행 7일 전부터 웹사이트를 통해 공지합니다.</p>
+          <p class="!mt-8 text-sm">부칙 — 이 방침은 0000년 00월 00일부터 시행합니다.</p>
+        </section>
+      </article>
+    </div>
+
+    <!-- 문의 안내 -->
+    <div class="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl bg-zinc-900 px-8 py-8 text-white sm:flex-row sm:items-center lg:ml-[25%] dark:ring-1 dark:ring-zinc-800">
+      <div>
+        <p class="font-bold">개인정보 처리에 대해 궁금한 점이 있으신가요?</p>
+        <p class="mt-1 text-sm text-zinc-400">열람·정정·삭제 요청도 문의하기로 접수할 수 있어요.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary shrink-0">문의하기</a>
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="border-t border-zinc-200 dark:border-zinc-800">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-sm md:flex-row">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold tracking-tight">
+        <span class="h-5 w-5 rounded-md bg-gradient-to-br from-brand-400 to-brand-600"></span>
+        브랜드명
+      </a>
+      <nav class="flex gap-6 text-zinc-500">
+        <a href="terms.html" class="hover:text-zinc-900 dark:hover:text-white">이용약관</a>
+        <a href="privacy.html" class="font-semibold text-zinc-900 dark:text-white" aria-current="page">개인정보처리방침</a>
+        <a href="contact.html" class="hover:text-zinc-900 dark:hover:text-white">문의하기</a>
+      </nav>
+      <small class="text-zinc-400">© <span id="year"></span> 브랜드명. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    const setMenu = open => {
+      navLinks.classList.toggle('hidden', !open);
+      navLinks.classList.toggle('flex', open);
+      menuBtn.setAttribute('aria-expanded', open);
+      menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    };
+    menuBtn.addEventListener('click', () => setMenu(navLinks.classList.contains('hidden')));
+
+    // 스크롤 위치에 따라 목차 강조
+    const links = [...document.querySelectorAll('#toc a')];
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('.terms section').forEach(s => io.observe(s));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
