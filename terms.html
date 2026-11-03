@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이용약관 — 브랜드명</title>
+  <meta name="description" content="브랜드명 서비스 이용약관" />
+
+  <!-- 폰트: Pretendard -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'media',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Pretendard Variable"', 'Pretendard', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fff4f1',
+              100: '#ffe6df',
+              400: '#ff7a5c',
+              500: '#ff5a36',
+              600: '#ec4420',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950; }
+      .btn-primary { @apply bg-brand-500 text-white shadow-sm shadow-brand-500/30 hover:bg-brand-600; }
+      .eyebrow { @apply text-xs font-bold uppercase tracking-[0.2em] text-brand-500; }
+
+      /* 약관 본문 */
+      .terms section { @apply scroll-mt-24 border-t border-zinc-200 py-10 first:border-t-0 first:pt-0 dark:border-zinc-800; }
+      .terms h2 { @apply text-xl font-bold tracking-tight; }
+      .terms h2 span { @apply mr-2 text-brand-500; }
+      .terms p { @apply mt-4 leading-relaxed text-zinc-600 dark:text-zinc-400; }
+      .terms ol { @apply mt-4 list-decimal space-y-2 pl-5 leading-relaxed text-zinc-600 marker:text-zinc-400 dark:text-zinc-400; }
+      .terms ol ol { @apply mt-2 list-[lower-alpha]; }
+
+      .toc-link { @apply block rounded-lg px-3 py-1.5 text-sm text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-900 dark:hover:text-white; }
+      .toc-link.active { @apply bg-brand-50 font-semibold text-brand-600 dark:bg-brand-500/10 dark:text-brand-400; }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 font-sans text-zinc-900 antialiased [word-break:keep-all] dark:bg-zinc-950 dark:text-zinc-100">
+
+  <!-- 헤더 -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-stone-50/80 backdrop-blur-md dark:border-zinc-800/70 dark:bg-zinc-950/80">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="h-6 w-6 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600"></span>
+        브랜드명
+      </a>
+
+      <button id="menu-btn" class="grid h-10 w-10 place-items-center rounded-lg hover:bg-zinc-100 md:hidden dark:hover:bg-zinc-900" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-links">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <ul id="nav-links" class="absolute inset-x-0 top-16 hidden flex-col gap-1 border-b border-zinc-200 bg-stone-50 px-6 py-4 text-sm font-medium md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 dark:border-zinc-800 dark:bg-zinc-950 md:dark:bg-transparent">
+        <li><a href="index.html#features" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">기능</a></li>
+        <li><a href="index.html#how" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">사용 방법</a></li>
+        <li><a href="index.html#pricing" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">요금제</a></li>
+        <li><a href="index.html#faq" class="block py-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">FAQ</a></li>
+        <li class="pt-2 md:pt-0"><a href="index.html#cta" class="btn btn-primary w-full !py-2.5 md:w-auto">시작하기</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <!-- 제목 -->
+    <div class="max-w-3xl">
+      <span class="eyebrow">Terms of Service</span>
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">이용약관</h1>
+      <p class="mt-5 text-zinc-600 dark:text-zinc-400">브랜드명 서비스를 이용해 주셔서 감사합니다. 서비스를 이용하시기 전에 아래 약관을 꼼꼼히 읽어주세요.</p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-500">
+        <span>시행일 <strong class="font-semibold text-zinc-900 dark:text-zinc-100">0000년 00월 00일</strong></span>
+        <span>최종 수정일 <strong class="font-semibold text-zinc-900 dark:text-zinc-100">0000년 00월 00일</strong></span>
+      </div>
+    </div>
+
+    <div class="mt-14 grid gap-12 lg:grid-cols-4">
+      <!-- 목차 -->
+      <aside class="lg:col-span-1">
+        <nav class="lg:sticky lg:top-24" aria-label="약관 목차">
+          <p class="mb-3 px-3 text-xs font-bold uppercase tracking-wider text-zinc-400">목차</p>
+          <ul id="toc" class="space-y-0.5">
+            <li><a href="#art1" class="toc-link">제1조 목적</a></li>
+            <li><a href="#art2" class="toc-link">제2조 정의</a></li>
+            <li><a href="#art3" class="toc-link">제3조 약관의 효력 및 변경</a></li>
+            <li><a href="#art4" class="toc-link">제4조 회원가입</a></li>
+            <li><a href="#art5" class="toc-link">제5조 서비스의 제공</a></li>
+            <li><a href="#art6" class="toc-link">제6조 유료 서비스와 결제</a></li>
+            <li><a href="#art7" class="toc-link">제7조 청약철회 및 환불</a></li>
+            <li><a href="#art8" class="toc-link">제8조 회원의 의무</a></li>
+            <li><a href="#art9" class="toc-link">제9조 이용 제한 및 해지</a></li>
+            <li><a href="#art10" class="toc-link">제10조 책임의 제한</a></li>
+            <li><a href="#art11" class="toc-link">제11조 분쟁 해결</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- 본문 -->
+      <article class="terms rounded-2xl border border-zinc-200 bg-white p-6 sm:p-10 lg:col-span-3 dark:border-zinc-800 dark:bg-zinc-900">
+        <section id="art1">
+          <h2><span>제1조</span>목적</h2>
+          <p>이 약관은 브랜드명(이하 "회사")이 제공하는 서비스(이하 "서비스")의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+        </section>
+
+        <section id="art2">
+          <h2><span>제2조</span>정의</h2>
+          <ol>
+            <li>"서비스"란 회사가 웹사이트 및 애플리케이션을 통해 제공하는 모든 온라인 서비스를 말합니다.</li>
+            <li>"회원"이란 이 약관에 동의하고 회사와 이용계약을 체결하여 서비스를 이용하는 자를 말합니다.</li>
+            <li>"계정"이란 회원 식별과 서비스 이용을 위해 회원이 설정하고 회사가 승인한 이메일 주소 및 비밀번호의 조합을 말합니다.</li>
+            <li>"유료 서비스"란 회사가 유료로 제공하는 프로, 팀 요금제 등의 서비스를 말합니다.</li>
+          </ol>
+        </section>
+
+        <section id="art3">
+          <h2><span>제3조</span>약관의 효력 및 변경</h2>
+          <ol>
+            <li>이 약관은 서비스 화면에 게시하거나 기타 방법으로 회원에게 공지함으로써 효력이 발생합니다.</li>
+            <li>회사는 관련 법령을 위반하지 않는 범위에서 약관을 변경할 수 있으며, 변경 시 적용일자와 변경 사유를 명시하여 적용일 7일 전(회원에게 불리한 경우 30일 전)부터 공지합니다.</li>
+            <li>회원이 변경된 약관에 동의하지 않는 경우 이용계약을 해지할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <section id="art4">
+          <h2><span>제4조</span>회원가입</h2>
+          <ol>
+            <li>이용자는 회사가 정한 양식에 따라 회원정보를 기입하고 이 약관에 동의함으로써 회원가입을 신청합니다.</li>
+            <li>회사는 다음 각 호에 해당하는 신청에 대해서는 승낙하지 않거나 사후에 이용계약을 해지할 수 있습니다.
+              <ol>
+                <li>타인의 명의를 이용하거나 허위 정보를 기재한 경우</li>
+                <li>만 14세 미만인 경우</li>
+                <li>이전에 약관 위반으로 회원자격을 상실한 경우</li>
+              </ol>
+            </li>
+          </ol>
+        </section>
+
+        <section id="art5">
+          <h2><span>제5조</span>서비스의 제공</h2>
+          <ol>
+            <li>서비스는 연중무휴, 1일 24시간 제공함을 원칙으로 합니다.</li>
+            <li>회사는 시스템 점검, 설비 교체 및 고장, 통신 두절 등 운영상 상당한 이유가 있는 경우 서비스 제공을 일시적으로 중단할 수 있으며, 이 경우 사전에 공지합니다.</li>
+            <li>회사는 서비스의 내용을 변경할 수 있으며, 중요한 변경 사항은 사전에 공지합니다.</li>
+          </ol>
+        </section>
+
+        <section id="art6">
+          <h2><span>제6조</span>유료 서비스와 결제</h2>
+          <ol>
+            <li>유료 서비스의 요금과 결제 방법은 서비스 내 요금제 안내에 따릅니다.</li>
+            <li>월 구독 요금은 결제일을 기준으로 매월 자동 결제되며, 회원은 언제든 다음 결제일 이전에 구독을 해지할 수 있습니다.</li>
+            <li>회사는 요금을 변경하는 경우 적용일 30일 전까지 회원에게 알립니다.</li>
+          </ol>
+        </section>
+
+        <section id="art7">
+          <h2><span>제7조</span>청약철회 및 환불</h2>
+          <ol>
+            <li>회원은 유료 서비스 결제일로부터 7일 이내에 서비스를 이용하지 않은 경우 청약을 철회하고 전액 환불받을 수 있습니다.</li>
+            <li>서비스를 일부 이용한 경우에는 이용 기간에 해당하는 금액을 제외하고 환불합니다.</li>
+            <li>환불은 원칙적으로 결제한 수단으로 진행되며, 신청일로부터 영업일 기준 3~7일 이내에 처리됩니다.</li>
+          </ol>
+        </section>
+
+        <section id="art8">
+          <h2><span>제8조</span>회원의 의무</h2>
+          <p>회원은 다음 행위를 하여서는 안 됩니다.</p>
+          <ol>
+            <li>타인의 정보 도용 또는 계정 공유</li>
+            <li>서비스의 정상적인 운영을 방해하는 행위</li>
+            <li>회사 또는 제3자의 지식재산권 등 권리를 침해하는 행위</li>
+            <li>법령 또는 공서양속에 반하는 정보를 게시하거나 전송하는 행위</li>
+          </ol>
+        </section>
+
+        <section id="art9">
+          <h2><span>제9조</span>이용 제한 및 해지</h2>
+          <ol>
+            <li>회원은 언제든지 서비스 내 설정 메뉴 또는 고객센터를 통해 이용계약 해지를 신청할 수 있습니다.</li>
+            <li>회사는 회원이 제8조의 의무를 위반한 경우 사전 통지 후 서비스 이용을 제한하거나 이용계약을 해지할 수 있습니다.</li>
+          </ol>
+        </section>
+
+        <section id="art10">
+          <h2><span>제10조</span>책임의 제한</h2>
+          <ol>
+            <li>회사는 천재지변 또는 이에 준하는 불가항력으로 서비스를 제공할 수 없는 경우 책임이 면제됩니다.</li>
+            <li>회사는 회원의 귀책사유로 인한 서비스 이용 장애에 대하여 책임을 지지 않습니다.</li>
+          </ol>
+        </section>
+
+        <section id="art11">
+          <h2><span>제11조</span>분쟁 해결</h2>
+          <ol>
+            <li>이 약관은 대한민국 법령에 따라 해석됩니다.</li>
+            <li>서비스 이용과 관련하여 분쟁이 발생한 경우 회사와 회원은 원만한 해결을 위해 성실히 협의하며, 협의가 이루어지지 않을 경우 민사소송법상의 관할 법원에 소를 제기할 수 있습니다.</li>
+          </ol>
+          <p class="!mt-8 text-sm">부칙 — 이 약관은 0000년 00월 00일부터 시행합니다.</p>
+        </section>
+      </article>
+    </div>
+
+    <!-- 문의 안내 -->
+    <div class="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl bg-zinc-900 px-8 py-8 text-white sm:flex-row sm:items-center lg:ml-[25%] dark:ring-1 dark:ring-zinc-800">
+      <div>
+        <p class="font-bold">약관에 대해 궁금한 점이 있으신가요?</p>
+        <p class="mt-1 text-sm text-zinc-400">언제든 문의해 주시면 안내해 드릴게요.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary shrink-0">문의하기</a>
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="border-t border-zinc-200 dark:border-zinc-800">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-sm md:flex-row">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold tracking-tight">
+        <span class="h-5 w-5 rounded-md bg-gradient-to-br from-brand-400 to-brand-600"></span>
+        브랜드명
+      </a>
+      <nav class="flex gap-6 text-zinc-500">
+        <a href="terms.html" class="font-semibold text-zinc-900 dark:text-white" aria-current="page">이용약관</a>
+        <a href="#" class="hover:text-zinc-900 dark:hover:text-white">개인정보처리방침</a>
+        <a href="contact.html" class="hover:text-zinc-900 dark:hover:text-white">문의하기</a>
+      </nav>
+      <small class="text-zinc-400">© <span id="year"></span> 브랜드명. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    const setMenu = open => {
+      navLinks.classList.toggle('hidden', !open);
+      navLinks.classList.toggle('flex', open);
+      menuBtn.setAttribute('aria-expanded', open);
+      menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    };
+    menuBtn.addEventListener('click', () => setMenu(navLinks.classList.contains('hidden')));
+
+    // 스크롤 위치에 따라 목차 강조
+    const links = [...document.querySelectorAll('#toc a')];
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('.terms section').forEach(s => io.observe(s));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
